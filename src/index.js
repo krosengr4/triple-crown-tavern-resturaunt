@@ -1,7 +1,7 @@
 import "./style.css";
-import { loadHomepage } from "./homepage.js";
-import { loadMenupage } from "./menupage.js";
-import { loadContactPage } from "./contactpage.js";
+import { loadHomepage } from "./pages/homepage.js";
+import { loadMenupage } from "./pages/menupage.js";
+import { loadContactPage } from "./pages/contactpage.js";
 
 const contentDiv = document.querySelector("#content");
 

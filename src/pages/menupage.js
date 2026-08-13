@@ -1,4 +1,4 @@
-import { FOOD_ITEMS, DRINK_ITEMS } from "./data/menu.js";
+import { FOOD_ITEMS, DRINK_ITEMS } from "../data/menu.js";
 
 export function loadMenupage() {
     const page = document.createElement("div");
