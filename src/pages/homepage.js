@@ -1,10 +1,11 @@
 import { ABOUT_TEXT, HOURS } from "../data/home.js";
+import { createTitle } from "../dom.js";
 
 export function loadHomepage() {
     const page = document.createElement("div");
     page.id = "content";
 
-    const titleDiv = createTitle();
+    const titleDiv = createTitle("⚾️Triple Crown Tavern⚾️");
     const aboutDiv = createAbout();
     const hoursDiv = createHours();
 
@@ -12,19 +13,6 @@ export function loadHomepage() {
     page.appendChild(aboutDiv);
     page.appendChild(hoursDiv);
     return page;
-}
-
-function createTitle() {
-    const titleDiv = document.createElement("div");
-    titleDiv.id = "pageTitle";
-
-    const homeTitle = document.createElement("h1");
-    homeTitle.id = "title";
-    homeTitle.textContent = "⚾️Triple Crown Tavern⚾️";
-
-    titleDiv.appendChild(homeTitle);
-
-    return titleDiv;
 }
 
 function createAbout() {

@@ -1,10 +1,11 @@
 import { FOOD_ITEMS, DRINK_ITEMS } from "../data/menu.js";
+import { createTitle } from "../dom.js";
 
 export function loadMenupage() {
     const page = document.createElement("div");
     page.id = "content";
 
-    const title = createTitle();
+    const title = createTitle("Menu");
     const foodDiv = createFoodSection();
     const drinkDiv = createDrinkSection();
 
@@ -12,18 +13,6 @@ export function loadMenupage() {
     page.appendChild(foodDiv);
     page.appendChild(drinkDiv);
     return page;
-}
-
-function createTitle() {
-    const titleDiv = document.createElement("div");
-    titleDiv.id = "pageTitle";
-
-    const titleHeader = document.createElement("h1");
-    titleHeader.id = "title";
-    titleHeader.textContent = "Menu";
-
-    titleDiv.appendChild(titleHeader);
-    return titleDiv;
 }
 
 function createFoodSection() {

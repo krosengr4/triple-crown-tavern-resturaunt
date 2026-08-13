@@ -1,28 +1,17 @@
 import { CONTACTS } from "../data/contacts.js";
+import { createTitle } from "../dom.js";
 
 export function loadContactPage() {
     const page = document.createElement("div");
     page.id = "content";
 
-    const title = createTitle();
+    const title = createTitle("Contact Us");
     const content = createContactCards();
 
     page.appendChild(title);
     page.appendChild(content);
 
     return page;
-}
-
-function createTitle() {
-    const titleDiv = document.createElement("div");
-    titleDiv.id = "pageTitle";
-
-    const titleHeader = document.createElement("h1");
-    titleHeader.id = "title";
-    titleHeader.textContent = "Contact Us";
-
-    titleDiv.appendChild(titleHeader);
-    return titleDiv;
 }
 
 function createContactCards() {
