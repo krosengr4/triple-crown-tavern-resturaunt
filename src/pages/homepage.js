@@ -1,4 +1,4 @@
-import { ABOUT_TEXT, HOURS } from "./data/home.js";
+import { ABOUT_TEXT, HOURS } from "../data/home.js";
 
 export function loadHomepage() {
     const page = document.createElement("div");

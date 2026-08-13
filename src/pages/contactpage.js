@@ -1,4 +1,4 @@
-import { CONTACTS } from "./data/contacts.js";
+import { CONTACTS } from "../data/contacts.js";
 
 export function loadContactPage() {
     const page = document.createElement("div");
