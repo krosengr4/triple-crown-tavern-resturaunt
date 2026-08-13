@@ -2,7 +2,7 @@ import { ABOUT_TEXT, HOURS } from "../data/home.js";
 
 export function loadHomepage() {
     const page = document.createElement("div");
-    page.id = "content";
+    page.classList = "page";
 
     const titleDiv = createTitle();
     const aboutDiv = createAbout();

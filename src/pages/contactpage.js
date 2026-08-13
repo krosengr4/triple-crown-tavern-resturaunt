@@ -2,7 +2,7 @@ import { CONTACTS } from "../data/contacts.js";
 
 export function loadContactPage() {
     const page = document.createElement("div");
-    page.id = "content";
+    page.classList = "page";
 
     const title = createTitle();
     const content = createContactCards();

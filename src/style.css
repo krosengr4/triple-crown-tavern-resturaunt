@@ -33,12 +33,20 @@
     border: 8px ridge #7a4300;
 }
 
-/* content */
-#content {
+/* page shell */
+.page {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* /* content */
+*/
+/* #content { */
+/*     display: flex; */
+/*     flex-direction: column; */
+/*     align-items: center; */
+/* } */
 
 #title {
     margin-top: 4px;
