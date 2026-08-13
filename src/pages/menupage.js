@@ -1,15 +1,29 @@
 import { FOOD_ITEMS, DRINK_ITEMS } from "../data/menu.js";
-import { createTitle } from "../dom.js";
+import { createTitle, createSection } from "../dom.js";
 
 export function loadMenupage() {
     const page = document.createElement("div");
     page.id = "content";
 
     const title = createTitle("Menu");
+
+    // const foodDiv = DRINK_ITEMS.map((item) => {
+    //     createCard(item.title, [{ text: item.about }]);
+    // });
+    //
+    // const drinkDiv = DRINK_ITEMS.map((item) => {
+    //     createCard(item.title, [
+    //         { text: item.concept },
+    //         { text: item.ingredients },
+    //     ]);
+    // });
+
     const foodDiv = createFoodSection();
     const drinkDiv = createDrinkSection();
 
     page.appendChild(title);
+    // page.appendChild(createSection("Food", foodDiv));
+    // page.appendChild(createSection("Drinks", drinkDiv));
     page.appendChild(foodDiv);
     page.appendChild(drinkDiv);
     return page;
@@ -67,7 +81,7 @@ function createDrinkSection() {
         card.classList = "itemCard";
 
         const itemHeader = document.createElement("h2");
-        itemHeader.id = "itemTitle";
+        // itemHeader.id = "itemTitle";
         itemHeader.classList = "itemContent";
         itemHeader.textContent = `${DRINK_ITEMS[i].title}`;
 
@@ -87,4 +101,22 @@ function createDrinkSection() {
     drinkDiv.appendChild(menuSection);
 
     return drinkDiv;
+}
+
+function createCard(heading, lines) {
+    const card = document.createElement("div");
+    card.classList = "itemCard";
+
+    const itemHeader = document.createElement("h2");
+    itemHeader.classList = "itemContent";
+    itemHeader.textContent = heading;
+
+    lines.forEach((line) => {
+        const p = document.createElement("p");
+        p.className = line.className ?? "itemAbout";
+        p.textContent = line.text;
+        card.appendChild(p);
+    });
+
+    return card;
 }
